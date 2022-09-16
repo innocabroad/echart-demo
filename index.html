@@ -1,51 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
- 
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <!-- 步骤1：引入echarts.js文件 -->
-  <script src="echarts.js"></script>
-  <!-- 
-  步骤1：引入echarts.js文件
-  步骤2：准备一个呈现图表的盒子
-  步骤3：初始化echarts实例对象
-  步骤4：准备配置项
-  步骤5：将配置项设置给echarts实例对象
-   -->
+<meta charset="UTF-8">
+<title>Echarts入门案例</title>
+<!-- 引入 开发环境的echarts.js -->
+<script src="js/echarts.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+
+<!-- 声明DOM容器对象,为ECharts准备一个具备大小（宽高）的Dom -->
+<style type="text/css">
+#main{
+	width: 600px;
+	height:400px;
+}
+</style>
 </head>
- 
 <body>
-  <!-- 步骤2：准备一个呈现图表的盒子 -->
-  <div style="width: 600px;height: 400px"></div>
-  <script>
-    // 步骤3：初始化echarts实例对象
-    // 参数, dom,决定图表最终呈现的位置
-    var mCharts = echarts.init(document.querySelector('div'))
-    // 步骤4：准备配置项
-    var option = {
-      xAxis: {
-        type: 'category',//category指明x轴为类目轴
-        data: ['小明', '小红', '小王']
-      },
-      yAxis: {
-        type: 'value'//value指明y轴为 数值轴, 指明数值轴之后, 无需指定data
-      },
-      series: [
-        {
-          name: '语文',
-          type: 'bar',
-          data: [70, 92, 87]
-        }
-      ]
-    }
-    // 步骤5：将配置项设置给echarts实例对象
-    //5个步骤除了option需要自己配置其他都是固定步骤 配置option参考echart官网！！！
-    mCharts.setOption(option)
-  </script>
+	<div id="main">
+	</div>
+
 </body>
- 
 </html>
 
